@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+	<ui:composition template="_template.xhtml">
+	
+		<ui:define name="templateNatura">
+		<p:panel header="Cadastro ONG" toggleable="true" toggleOrientation="vertical" />
+			<h:form>
+				<p:messages />
+				<p:growl />
+				<h:panelGrid columns="2">
+					<p:outputLabel value="Nome" for="nome" />
+					<p:inputText value="#{ongBean.ong.nome}" id="nome" />
+					
+					<p:outputLabel value="Email" for="email" />
+					<p:inputText value="#{ongBean.ong.email}" id="email" />
+					
+					<p:outputLabel value="Telefone" for="telefone" />
+					<p:inputMask mask="(99)9999-9999" id="telefone"  value="#{ongBean.ong.telefone}" />
+					
+					<p:outputLabel value="CNPJ" for="cnpj" />
+					<p:inputMask mask="99.999.999/9999-99" id="cnpj"  value="#{ongBean.ong.cnpj}" />
+					
+					<p:outputLabel value="Logo" for="logo"/>
+					<p:inputText id="logo" value="#{ongBean.ong.logo}"/>
+										
+					<p:commandButton value="Gravar" action="#{ongBean.save()}" />
+				</h:panelGrid>
+			</h:form>
+		</ui:define>
+	</ui:composition>
+</html>

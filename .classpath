@@ -32,7 +32,7 @@
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jandex-2.0.3.Final.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/javassist-3.20.0-GA.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jboss-logging-3.3.0.Final.jar"/>
-	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jsf-api-2.2.14.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jsf-api-2.2.14.jar" sourcepath="C:/opensource/eclipse-neon/opensource/Maven-Dependencies/.m2/repository/com/sun/faces/jsf-api/2.2.14/jsf-api-2.2.14-sources.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jsf-impl-2.2.14.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/ojdbc6.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/primefaces-6.1.jar"/>

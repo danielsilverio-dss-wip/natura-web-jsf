@@ -1,23 +1,25 @@
 package br.com.omega.natura.repository;
 
-import java.awt.PageAttributes.MediaType;
 import java.util.Arrays;
 import java.util.List;
 
+import javax.ws.rs.core.MediaType;
 import javax.xml.ws.WebServiceException;
 
-import org.apache.catalina.WebResource;
-
+import com.sun.jersey.api.client.Client;
 import com.sun.jersey.api.client.ClientResponse;
+import com.sun.jersey.api.client.WebResource;
+
+import br.com.omega.natura.entity.Ong;
 
 
 public class OngRepository {
 
-		private static final String URL = "http//10.20.24.27:8081/ong/";
+		private static final String URL = "http://10.20.24.27:8081/ong/";
 		
 		private Client client = Client.create();
 		
-		public List<Ong> listar() throws Exception{
+		/*public List<Ong> listar() throws Exception{
 			WebResource resource = client.resource(URL);
 			
 			//Chama o webservice
@@ -49,9 +51,9 @@ public class OngRepository {
 						response.getStatus());
 			}
 			return response.getEntity(Ong.class);
-		}
+		}*/
 		
-		public void cadastrar(Ong ong) throws xception{
+		public void save(Ong ong) throws Exception{
 			WebResource resource = client.resource(URL);
 			
 			ClientResponse response = resource
@@ -64,8 +66,8 @@ public class OngRepository {
 			}
 		}
 		
-		public void atualizar(Ong ong) throws Exception{
-			WebResource resource = client.resource(URL + ong.getCodigo());
+		/*public void atualizar(Ong ong) throws Exception{
+			WebResource resource = client.resource(URL + ong.getId());
 			
 			ClientResponse response = resource
 					.type(MediaType.APPLICATION_JSON)
@@ -77,8 +79,8 @@ public class OngRepository {
 			}
 		}
 		
-		public void remover(int codigo) throws Exception{
-			WebResource resource = client.resource(URL + codigo);
+		public void remover(int id) throws Exception{
+			WebResource resource = client.resource(URL + id);
 			
 			ClientResponse response = 
 					resource.delete(ClientResponse.class);
@@ -87,6 +89,6 @@ public class OngRepository {
 				throw new Exception("HTTP Status: " +
 						response.getStatus());
 			}
-		}
+		}*/
 		
 	}

@@ -1,39 +1,24 @@
 package br.com.omega.natura.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Lob;
-import javax.persistence.Table;
-@Entity
-@Table(name="TB_ONG")
 public class Ong {
-	@Id
-	@Column(name="id_ong")
-	@GeneratedValue(strategy=GenerationType.AUTO)
+
 	private long id;
-	
-	@Column(name="nm_nome")
+
 	private String nome;
-	
-	@Column(name="nm_email")
+
 	private String email;
-	
-	@Column(name="nr_telefone")
+
 	private String telefone;
-	
-	@Column(name="nr_cnpj")
+
 	private String cnpj;
-	
-	@Lob
+
 	private byte[] logo;
-	
-//  private List<Projeto> projetos;
-	
-	public Ong(){}
-	
+
+	// private List<Projeto> projetos;
+
+	public Ong() {
+	}
+
 	public Ong(String nome, String email, String telefone, String cnpj, byte[] logo) {
 		super();
 		this.nome = nome;
@@ -90,9 +75,5 @@ public class Ong {
 	public void setLogo(byte[] logo) {
 		this.logo = logo;
 	}
-	
-	
-	
-	
 
 }

@@ -15,7 +15,7 @@ import br.com.omega.natura.entity.Ong;
 
 public class OngRepository {
 
-		private static final String URL = "http://10.20.24.27:8081/ong/";
+		private static final String URL = "http://10.20.73.26:8081/ong/";
 		
 		private Client client = Client.create();
 		
@@ -58,7 +58,7 @@ public class OngRepository {
 			
 			ClientResponse response = resource
 					.type(MediaType.APPLICATION_JSON)
-					.post(ClientResponse.class,ong);
+					.post(ClientResponse.class, ong);
 			
 			if (response.getStatus() != 201){
 				throw new WebServiceException("Http Status: " +

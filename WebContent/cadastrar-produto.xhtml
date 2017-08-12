@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+	<ui:composition template="_template.xhtml">
+	
+		<ui:define name="templateNatura">
+		<p:panel header="Cadastro Produto" toggleable="true" toggleOrientation="vertical" />
+			<h:form>
+				<p:messages />
+				<p:growl />
+				<h:panelGrid columns="2">
+					<p:outputLabel value="Nome" for="nome" />
+					<p:inputText value="#{produtoBean.produto.nome}" id="nome" />
+					
+					<p:outputLabel value="Categoria" for="categoria-nome" />
+					<p:inputText value="#{produtoBean.produto.categoria.nome}" id="categoria-nome" />
+										
+					<p:commandButton value="Gravar" action="#{produtoBean.save()}" />
+				</h:panelGrid>
+			</h:form>
+		</ui:define>
+	</ui:composition>
+</html>
